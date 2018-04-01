@@ -9,7 +9,7 @@
 #include <N64.h>
 #include <gSP.h>
 #include <Log.h>
-#include <Revision.h>
+//#include <Revision.h>
 #include <FrameBuffer.h>
 #include <GLideNUI/GLideNUI.h>
 #include <DisplayWindow.h>
@@ -92,11 +92,11 @@ bool DisplayWindowMupen64plus::_start()
 	LOG(LOG_VERBOSE, "[gles2GlideN64]: Create setting videomode %dx%d\n", m_screenWidth, m_screenHeight);
 
 	char caption[128];
-# ifdef _DEBUG
-	sprintf(caption, "%s debug. Revision %s", pluginName, PLUGIN_REVISION);
-# else // _DEBUG
-	sprintf(caption, "%s. Revision %s", pluginName, PLUGIN_REVISION);
-# endif // _DEBUG
+//# ifdef _DEBUG
+//	sprintf(caption, "%s debug. Revision %s", pluginName, PLUGIN_REVISION);
+//# else // _DEBUG
+//	sprintf(caption, "%s. Revision %s", pluginName, PLUGIN_REVISION);
+//# endif // _DEBUG
 	CoreVideo_SetCaption(caption);
 
 	return true;
