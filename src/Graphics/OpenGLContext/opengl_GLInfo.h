@@ -25,6 +25,10 @@ struct GLInfo {
 	bool msaa = false;
 	bool depthTexture = false;
 	bool noPerspective = false;
+	bool fragment_interlock = false;
+	bool fragment_interlockNV = false;
+	bool fragment_ordering = false;
+	bool ext_fetch = false;
 	Renderer renderer = Renderer::Other;
 
 	void init();
