@@ -116,6 +116,11 @@ void GLInfo::init() {
 
 	depthTexture = !isGLES2 || Utils::isExtensionSupported(*this, "GL_OES_depth_texture");
 	noPerspective = Utils::isExtensionSupported(*this, "GL_NV_shader_noperspective_interpolation");
+
+	fetch_depth = Utils::isExtensionSupported(*this, "GL_ARM_shader_framebuffer_fetch_depth_stencil");
+	texture_barrier = (!isGLESX && numericVersion >= 45) || Utils::isExtensionSupported(*this, "GL_ARB_texture_barrier");
+	texture_barrierNV = Utils::isExtensionSupported(*this, "GL_NV_texture_barrier");
+
 	ext_fetch = Utils::isExtensionSupported(*this, "GL_EXT_shader_framebuffer_fetch") && !isGLES2 && (!isGLESX || ext_draw_buffers_indexed) && !imageTextures;
 
 	if (config.frameBufferEmulation.N64DepthCompare != 0) {
@@ -124,5 +129,4 @@ void GLInfo::init() {
 			LOG(LOG_WARNING, "Your GPU does not support the extensions needed for N64 Depth Compare.\n");
 		}
 	}
-
 }

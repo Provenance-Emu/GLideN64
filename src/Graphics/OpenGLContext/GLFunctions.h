@@ -214,6 +214,8 @@ extern PFNGLBLENDCOLORPROC g_glBlendColor;
 #define glNamedFramebufferTexture(...) CHECKED_GL_FUNCTION(g_glNamedFramebufferTexture, __VA_ARGS__)
 #define glDrawRangeElementsBaseVertex(...) CHECKED_GL_FUNCTION(g_glDrawRangeElementsBaseVertex, __VA_ARGS__)
 #define glFlushMappedBufferRange(...) CHECKED_GL_FUNCTION(g_glFlushMappedBufferRange, __VA_ARGS__)
+#define glTextureBarrier(...) CHECKED_GL_FUNCTION(g_glTextureBarrier, __VA_ARGS__)
+#define glTextureBarrierNV(...) CHECKED_GL_FUNCTION(g_glTextureBarrierNV, __VA_ARGS__)
 #define glClearBufferfv(...) CHECKED_GL_FUNCTION(g_glClearBufferfv, __VA_ARGS__)
 #define glEnablei(...) CHECKED_GL_FUNCTION(g_glEnablei, __VA_ARGS__)
 #define glDisablei(...) CHECKED_GL_FUNCTION(g_glDisablei, __VA_ARGS__)
@@ -311,6 +313,8 @@ extern PFNGLCREATEFRAMEBUFFERSPROC g_glCreateFramebuffers;
 extern PFNGLNAMEDFRAMEBUFFERTEXTUREPROC g_glNamedFramebufferTexture;
 extern PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC g_glDrawRangeElementsBaseVertex;
 extern PFNGLFLUSHMAPPEDBUFFERRANGEPROC g_glFlushMappedBufferRange;
+extern PFNGLTEXTUREBARRIERPROC g_glTextureBarrier;
+extern PFNGLTEXTUREBARRIERNVPROC g_glTextureBarrierNV;
 extern PFNGLCLEARBUFFERFVPROC g_glClearBufferfv;
 extern PFNGLENABLEIPROC g_glEnablei;
 extern PFNGLDISABLEIPROC g_glDisablei;

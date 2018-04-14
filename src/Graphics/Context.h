@@ -151,6 +151,8 @@ namespace graphics {
 
 		u32 convertInternalTextureFormat(u32 _format) const;
 
+		void textureBarrier();
+
 		/*---------------Framebuffer-------------*/
 
 		const FramebufferTextureFormats & getFramebufferTextureFormats();
