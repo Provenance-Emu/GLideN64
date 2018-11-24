@@ -40,12 +40,18 @@ TxDbg::~TxDbg()
 void
 TxDbg::output(const int level, const wchar_t *format, ...)
 {
-	if (level > _level)
+    if (level > _level)
 		return;
 
 	va_list va;
+
+    NSString *nsformat = [[NSString alloc] initWithBytes:format
+                                                  length:wcslen(format)*sizeof(*format)
+                                                encoding:NSUTF32LittleEndianStringEncoding];
+
+    nsformat = [@"GLideN64: " stringByAppendingString:nsformat];
+
 	va_start(va, format);
-	NSString *nsformat = [NSString stringWithFormat:@"GLideN64: %s", format];
 	NSLogv(nsformat, va);
 	va_end(va);
 }
