@@ -240,9 +240,9 @@ void GLInfo::init() {
 
 
 
-#ifdef GL_DEBUG
-	glDebugMessageCallback(on_gl_error, nullptr);
-	glDebugMessageControl(GL_DONT_CARE, GL_DONT_CARE, GL_DONT_CARE, 0, NULL, GL_TRUE);
-	glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
-#endif
+//#ifdef GL_DEBUG
+//	glDebugMessageCallback(on_gl_error, nullptr);
+//	glDebugMessageControl(GL_DONT_CARE, GL_DONT_CARE, GL_DONT_CARE, 0, NULL, GL_TRUE);
+//	glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
+//#endif
 }
